@@ -55,3 +55,18 @@ sudo mkdir /var/lib/phptimeseries
 sudo chown www-data:root /var/lib/phpfiwa
 sudo chown www-data:root /var/lib/phpfina
 sudo chown www-data:root /var/lib/phptimeseries
+
+
+### Node.js (including NPM)
+### https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
+sudo apt-get update
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt-get install -y build-essential
+
+### MongoDb
+### https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
